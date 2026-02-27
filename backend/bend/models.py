@@ -8,8 +8,7 @@ class Product:
         self.model = model
         self.price = price
         self.stock = stock
-        self.specs = kwargs  # для інших полів (ram, storage, battery_capacity...)
-
+        self.specs = kwargs  # other fields like cpu, ram, etc. will be stored here
     @staticmethod
     def all():
         conn = get_connection()
