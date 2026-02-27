@@ -25,3 +25,7 @@ from models import Product
 products = Product.all()
 for prod in products:
     print(prod)
+
+# @app.get("/api/products")
+# def get_products():
+#     return Product.all()

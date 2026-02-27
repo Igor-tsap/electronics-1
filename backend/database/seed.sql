@@ -1,4 +1,4 @@
--- seed.sql (розширений)
+
 
 INSERT INTO products (category, brand, model, price, stock, ram, storage, display_size, battery_capacity, camera_mp, cpu, gpu, screen_size, weight, screen_type, battery_life, water_resistance, description)
 VALUES
