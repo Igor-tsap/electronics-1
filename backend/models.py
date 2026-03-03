@@ -1,5 +1,5 @@
 
-from .db import get_connection
+from db import get_connection
 
 class Product:
     def __init__(self, category, brand, model, price, stock=0, **kwargs):

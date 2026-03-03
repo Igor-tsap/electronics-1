@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from bend.db import get_connection
+from db import get_connection
 import mysql.connector
 
 MIGRATIONS_DIR = Path(__file__).parent / "migrations"

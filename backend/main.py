@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
-from .models import Product
-from .db import get_connection
+from models import Product
+# from .db import get_connection
 
 app = FastAPI()
 
