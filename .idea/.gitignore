@@ -14,10 +14,12 @@ backend/.env
 .vscode/
 
 # Python
+backend/__pycache__/
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.pyс
 *.so
 
 # Virtual env
