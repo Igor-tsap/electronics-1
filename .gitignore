@@ -9,6 +9,7 @@ backend/.env
 
 # macOS
 .DS_Store
+backend/.DS_Store
 
 # IDE
 .idea/
