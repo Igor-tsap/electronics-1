@@ -86,4 +86,6 @@ def main():
     run_seed()
 
 if __name__ == "__main__":
+    print("MIGRATIONS_DIR:", MIGRATIONS_DIR)
+    print("Files found:", os.listdir(MIGRATIONS_DIR))
     main()
