@@ -1,3 +1,4 @@
+backend/.env
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -8,6 +9,7 @@ backend/.env
 
 # macOS
 .DS_Store
+backend/.DS_Store
 
 # IDE
 .idea/
