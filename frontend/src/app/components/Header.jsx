@@ -62,7 +62,7 @@ export default function Header() {
             Login
           </a>
           <button
-            className="bg-black text-white px-5 py-2 rounded"
+            className="bg-black text-white px-5 py-2 rounded-[8px]"
             style={{
               fontFamily: "var(--font-inter)",
               fontSize: "16px",

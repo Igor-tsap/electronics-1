@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Query, Request
 from models import Product
 from fastapi.middleware.cors import CORSMiddleware
 # from .db import get_connection
@@ -19,28 +19,10 @@ app.add_middleware(
 )
 
 @app.get("/api/products")
-def get_products():
+def get_products(page: int = Query(1), limit: int = Query(10)):
     try:
-        return Product.all()
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    
-@app.post("/api/products")
-async def create_product(request: Request):
-    try:
-        data = await request.json()
-
-        product = Product(
-            category=data["category"],
-            brand=data["brand"],
-            model=data["model"],
-            price=data["price"],
-            stock=data.get("stock", 0)
-        )
-
-        product.save()
-
-        return {"message": "Product created"}
-
+        page = int(page)
+        limit = int(limit)
+        return Product.paginate(page, limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
