@@ -21,8 +21,6 @@ app.add_middleware(
 @app.get("/api/products")
 def get_products(page: int = Query(1), limit: int = Query(10)):
     try:
-        page = int(page)
-        limit = int(limit)
         return Product.paginate(page, limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

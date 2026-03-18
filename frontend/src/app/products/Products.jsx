@@ -27,7 +27,7 @@ export default function Products() {
 
                         <div className="w-full h-[180px] bg-gray-200 rounded-[8px]" />
 
-                        <div className="p-4">
+                        <div className="pt-4 pb-2">
                             <div style={{ fontFamily: "var(--font-roboto)", fontSize: "16px", fontWeight: 500 }}>
                                 {product.brand} {product.model}
                             </div>
