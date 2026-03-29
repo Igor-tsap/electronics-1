@@ -30,3 +30,24 @@ class Product:
         conn.commit()
         cursor.close()
         conn.close()
+
+    @staticmethod
+    def paginate(page, limit):
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        offset = (page - 1) * limit
+
+        cursor.execute("SELECT * FROM products ORDER BY id LIMIT %s OFFSET %s", (limit, offset))
+        products = cursor.fetchall()
+
+        cursor.execute("SELECT COUNT(*) as total FROM products")
+        total = cursor.fetchone()["total"]
+
+        cursor.close()
+        conn.close()
+
+        return {
+            "products": products,
+            "total": total
+        }
